@@ -3,6 +3,10 @@
   "displayName": "NekoMaid UI Lang",
   "description": "Adds syntax highlighting support for `.neko_ui` files.",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheDudeFromCI/nekomaid-lang-ext"
+  },
   "engines": {
     "vscode": "^1.107.0"
   },
