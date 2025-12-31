@@ -1,0 +1,108 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "NekoMaid UI",
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#widget" },
+    { "include": "#equals" },
+    { "include": "#semi" },
+    { "include": "#brace" },
+    { "include": "#strings-double" },
+    { "include": "#strings-single" },
+    { "include": "#strings-tick" },
+    { "include": "#variable-ref" },
+    { "include": "#colors" },
+    { "include": "#numbers" },
+    { "include": "#boolean" },
+    { "include": "#comments" },
+    { "include": "#property" },
+    { "include": "#selector" },
+    { "include": "#variables" },
+    { "include": "#simple-strings" }
+  ],
+  "repository": {
+    "keywords": {
+      "name": "keyword.control.nekomaid",
+      "match": "\\b(import|class)\\b"
+    },
+    "equals": {
+      "name": "keyword.operator.assignment.nekomaid",
+      "match": "="
+    },
+    "semi": {
+      "name": "punctuation.semi.nekomaid",
+      "match": ";"
+    },
+    "brace": {
+      "name": "punctuation.brackets.curly.nekomaid",
+      "match": "\\{|\\}"
+    },
+    "strings-double": {
+      "name": "string.quoted.double.nekomaid",
+      "match": "\".*\""
+    },
+    "strings-single": {
+      "name": "string.quoted.single.nekomaid",
+      "match": "'.*'"
+    },
+    "strings-tick": {
+      "name": "string.quoted.other.nekomaid",
+      "match": "`.*`"
+    },
+    "variable-ref": {
+      "name": "variable.name.nekomaid",
+      "match": "\\$[a-zA-Z_][a-zA-Z0-9_-]*\\b"
+    },
+    "colors": {
+      "name": "constant.other.nekomaid",
+      "match": "#([a-fA-F0-9]{8}|a-fA-F0-9]{6}|[a-fA-F0-9]{3})\\b"
+    },
+    "numbers": {
+      "name": "constant.numeric.nekomaid",
+      "match": "\\b\\-?(\\d+(\\.\\d*)?|\\.\\d+)(px|%)?\\b"
+    },
+    "boolean": {
+      "name": "constant.language.boolean.nekomaid",
+      "match": "\\b([Tt]rue|[Ff]alse)\\b"
+    },
+    "comments": {
+      "name": "comment.line.double-slash.nekomaid",
+      "begin": "//",
+      "end": "$\\n?"
+    },
+    "property": {
+      "name": "variable.parameter.nekomaid",
+      "match": "\\b([a-zA-Z_][a-zA-Z0-9_-]*)(\\s*)(:)",
+      "captures": {
+        "1": { "name": "variable.parameter.name.nekomaid" },
+        "3": { "name": "punctuation.separator.key-value.nekomaid" }
+      }
+    },
+    "widget": {
+      "match": "\\b(layout\\s+with|layout|with|style|def)\\s+([a-zA-Z_][a-zA-Z0-9_-]*)\\b",
+      "captures": {
+        "1": { "name": "storage.type.nekomaid" },
+        "2": { "name": "entity.name.class.nekomaid" }
+      }
+    },
+    "selector": {
+      "name": "entity.name.selector.nekomaid",
+      "match": "\\[+!][a-zA-Z_][a-zA-Z0-9_-]*\\b"
+    },
+    "simple-strings": {
+      "match": "\\b([a-zA-Z_][a-zA-Z0-9_-]*)\\s*(;)",
+      "captures": {
+        "1": { "name": "string.quoted.other.nekomaid" },
+        "2": { "name": "punctuation.semi.nekomaid" }
+      }
+    },
+    "variables": {
+      "match": "(\\bvar)\\s+([a-zA-Z_][a-zA-Z0-9_-]*)\\b",
+      "captures": {
+        "1": { "name": "keyword.nekomaid" },
+        "2": { "name": "variable.name.nekomaid" }
+      }
+    }
+  },
+  "scopeName": "source.neko_ui"
+}
