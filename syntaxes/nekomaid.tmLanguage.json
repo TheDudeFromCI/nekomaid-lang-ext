@@ -2,7 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "NekoMaid UI",
   "patterns": [
-    { "include": "#keywords" },
+    { "include": "#import" },
+    { "include": "#class" },
     { "include": "#widget" },
     { "include": "#equals" },
     { "include": "#semi" },
@@ -21,9 +22,9 @@
     { "include": "#simple-strings" }
   ],
   "repository": {
-    "keywords": {
+    "import": {
       "name": "keyword.control.nekomaid",
-      "match": "\\b(import|class)\\b"
+      "match": "\\bimport\\b"
     },
     "equals": {
       "name": "keyword.operator.assignment.nekomaid",
@@ -101,6 +102,13 @@
       "captures": {
         "1": { "name": "keyword.nekomaid" },
         "2": { "name": "variable.name.nekomaid" }
+      }
+    },
+    "class": {
+      "match": "\\b(class)\\s+([a-zA-Z_][a-zA-Z0-9_-]*)\\b",
+      "captures": {
+        "1": { "name": "keyword.nekomaid" },
+        "2": { "name": "entity.name.class.nekomaid" }
       }
     }
   },
