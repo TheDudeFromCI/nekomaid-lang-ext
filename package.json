@@ -2,28 +2,38 @@
   "name": "nekomaid-ui-lang",
   "displayName": "NekoMaid UI Lang",
   "description": "Adds syntax highlighting support for `.neko_ui` files.",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "publisher": "TheDudeFromCI",
   "repository": {
     "type": "git",
     "url": "https://github.com/TheDudeFromCI/nekomaid-lang-ext"
   },
   "engines": {
-    "vscode": "^1.107.0"
+    "vscode": "^1.104.0"
   },
   "categories": [
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "nekomaid",
-      "aliases": ["NekoMaid UI", "nekomaid"],
-      "extensions": [".neko_ui"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "nekomaid",
-      "scopeName": "source.neko_ui",
-      "path": "./syntaxes/nekomaid.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "nekomaid",
+        "aliases": [
+          "NekoMaid UI",
+          "nekomaid"
+        ],
+        "extensions": [
+          ".neko_ui"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nekomaid",
+        "scopeName": "source.neko_ui",
+        "path": "./syntaxes/nekomaid.tmLanguage.json"
+      }
+    ]
   }
 }
