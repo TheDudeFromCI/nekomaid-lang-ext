@@ -56,7 +56,7 @@
     },
     "colors": {
       "name": "constant.other.nekomaid",
-      "match": "#([a-fA-F0-9]{8}|a-fA-F0-9]{6}|[a-fA-F0-9]{3})\\b"
+      "match": "(#[a-fA-F0-9]+)\\b"
     },
     "numbers": {
       "name": "constant.numeric.nekomaid",
