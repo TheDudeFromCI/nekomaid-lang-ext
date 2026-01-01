@@ -24,7 +24,7 @@
   "repository": {
     "import": {
       "name": "keyword.control.nekomaid",
-      "match": "\\bimport\\b"
+      "match": "\\b(import|output)\\b"
     },
     "equals": {
       "name": "keyword.operator.assignment.nekomaid",
