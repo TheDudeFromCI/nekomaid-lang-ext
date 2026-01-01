@@ -60,7 +60,7 @@
     },
     "numbers": {
       "name": "constant.numeric.nekomaid",
-      "match": "\\b\\-?(\\d+(\\.\\d*)?|\\.\\d+)(px|%)?\\b"
+      "match": "\\b\\-?(\\d+(\\.\\d*)?|\\.\\d+)(%|px\\b|\\b)"
     },
     "boolean": {
       "name": "constant.language.boolean.nekomaid",
